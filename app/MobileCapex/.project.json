@@ -1,0 +1,54 @@
+{
+    "Credential": "cf",
+    "Template": {
+        "Id": "@ext-mdkvsc-npm-dev/generator-mdk",
+        "Name": "CRUD",
+        "Version": "0.0.1"
+    },
+    "CF": {
+        "Target": "",
+        "Organization": "",
+        "Space": "",
+        "Deploy": {
+            "Description": "My SAP application",
+            "WebClient": {
+                "Runtime": "preview",
+                "URL": ""
+            },
+            "Destination": [{
+                "CF": "TestApp-app-srv",
+                "MDK": "../service/TestApp/",
+                "URL": ""
+            }]
+        }
+    },
+    "MobileService": {
+        "Type": "standard",
+        "AdminAPI": "",
+        "AppId": "lcap.TestApp.MobileCapex",
+        "Destination": []
+    },
+    "Onboarding": {
+        "Schema": "sapmobilesvcs",
+        "TimeZone": "UTC",
+        "URL": ""
+    },
+    "LCAP": {
+        "FullName": "TestApp_MobileCapex",
+        "Service": [{
+            "mdk": "MobileCapex/Services/service1.service",
+            "cap": {
+                "name": "TestAppService",
+                "sourcePath": "srv/service.cds",
+                "path": "/service/TestApp/",
+                "entryPath": "/service/TestApp",
+                "destination": "TestApp-app-srv",
+                "value": "0"
+            }
+        }],
+        "sourceTemplate": {
+            "id": "html5moduletemplates.basicSAPUI5ApplicationProjectModule",
+            "version": "1.40.12"
+        }
+    }
+}

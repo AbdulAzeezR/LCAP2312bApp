@@ -1,0 +1,19 @@
+{
+    "_Type": "Action.Type.ODataService.DraftEnabled.Edit",
+    "Target": {
+        "Service": "/MobileCapex/Services/service1.service",
+        "EntitySet": "Capex",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "ShowActivityIndicator": true,
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": {
+        "Name": "/MobileCapex/Actions/UpdateEntitySuccessMessage.action",
+        "Properties": {
+            "Message": "Draft Edit"
+        }
+    },
+    "OnFailure": "/MobileCapex/Actions/UpdateEntityFailureMessage.action"
+}

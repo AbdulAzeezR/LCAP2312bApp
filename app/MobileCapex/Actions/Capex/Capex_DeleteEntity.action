@@ -1,0 +1,13 @@
+{
+    "Target": {
+        "EntitySet": "Capex",
+        "Service": "/MobileCapex/Services/service1.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "OnSuccess": "/MobileCapex/Actions/DeleteEntitySuccessMessage.action",
+    "OnFailure": "/MobileCapex/Actions/DeleteEntityFailureMessage.action",
+    "ActionResult": {
+        "_Name": "delete"
+    },
+    "_Type": "Action.Type.ODataService.DeleteEntity"
+}

@@ -1,0 +1,71 @@
+{
+	"Caption": "Update Capex Detail",
+	"DesignTimeTarget": {
+		"Service": "/MobileCapex/Services/service1.service",
+		"EntitySet": "Capex",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"Position": "Left",
+				"Caption": "Cancel",
+				"OnPress": "/MobileCapex/Rules/Capex/Capex_Cancel.js"
+			},
+			{
+				"Position": "Right",
+				"SystemItem": "Save",
+				"OnPress": "/MobileCapex/Rules/Capex/Capex_UpdateEntity.js"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "Title",
+							"_Name": "Title",
+							"Value": "{Title}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "Amount",
+							"_Name": "Amount",
+							"Value": "{Amount}",
+							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "Category_ID",
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"IsPickerDismissedOnSelection": true,
+							"IsSelectedSectionEnabled": true,
+							"PickerItems": {
+								"DisplayValue": "{Name}",
+								"ReturnValue": "{ID}",
+								"Target": {
+									"EntitySet": "Categories",
+									"Service": "/MobileCapex/Services/service1.service"
+								}
+							},
+							"Value": "{Category_ID}",
+							"_Name": "Category_ID",
+							"_Type": "Control.Type.FormCell.ListPicker"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Capex_Edit",
+	"PrefersLargeCaption": true
+}

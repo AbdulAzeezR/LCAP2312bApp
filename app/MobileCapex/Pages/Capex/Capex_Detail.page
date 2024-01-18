@@ -1,0 +1,72 @@
+{
+	"Caption": "Capex Detail",
+	"DesignTimeTarget": {
+		"Service": "/MobileCapex/Services/service1.service",
+		"EntitySet": "Capex",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/MobileCapex/Rules/Capex/NavToCapex_Edit.js",
+				"Position": "Right",
+				"SystemItem": "Edit"
+			},
+			{
+				"OnPress": "/MobileCapex/Rules/Capex/Capex_DeleteConfirmation.js",
+				"Position": "Right",
+				"SystemItem": "Trash"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{Title}",
+						"Subhead": "{Amount}",
+						"BodyText": "",
+						"Footnote": "",
+						"Description": "{Category_ID}",
+						"StatusText": "",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": ""
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "Title",
+							"Value": "{Title}"
+						},
+						{
+							"KeyName": "Amount",
+							"Value": "{Amount}"
+						},
+						{
+							"KeyName": "Category_ID",
+							"Value": "{Category_ID}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Capex_Detail",
+	"PrefersLargeCaption": true
+}

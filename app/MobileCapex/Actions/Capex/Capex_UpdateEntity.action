@@ -1,0 +1,19 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "Capex",
+        "Service": "/MobileCapex/Services/service1.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "Title": "#Control:Title/#Value",
+        "Amount": "#Control:Amount/#Value",
+        "Category_ID": "#Control:Category_ID/#SelectedValue"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/MobileCapex/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/MobileCapex/Actions/UpdateEntityFailureMessage.action"
+}

@@ -1,0 +1,8 @@
+{
+    "_Type": "Action.Type.ApplicationUpdate",
+    "ActionResult": {
+        "_Name": "AppUpdate"
+    },
+    "OnFailure": "/MobileCapex/Rules/Application/AppUpdateFailure.js",
+    "OnSuccess": "/MobileCapex/Rules/Application/AppUpdateSuccess.js"
+}
